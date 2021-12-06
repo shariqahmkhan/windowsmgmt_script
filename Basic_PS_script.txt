@@ -1,0 +1,16 @@
+To know .Net framework 
+Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP' -Recurse | Get-ItemProperty -Name version -EA 0 | Where { $_.PSChildName -Match '^(?!S)\p{L}'} | Select PSChildName, version
+To find list of ports open/closed
+netstat -aon
+netstat -aon | findstr /i listening to filter those which are open
+Possibility of inbound rules through firewall (Windows Netstat Command to Check Open Ports in Windows (configserverfirewall.com)
+To test response or if remote server is up/running or listening
+Test-NetConnection -computername <IP>  
+To return just True or False 
+Test-NetConnection -computername <IP>  -Quiet 
+To specify port number
+Test-NetConnection -computername <IP>  -port <port #>
+System volume information high space usage due to chunk store ( Dedup and Chunk Store is Huge! | Tech Blog (bohemiangrove.co.uk)
+start-dedupjob -Volume <VolumeLetter> -Type GarbageCollection
+start-dedupjob -Volume <VolumeLetter> -Type DataScrubbing
+To monitor dedup (takes around few hours)  Get-DedupJob

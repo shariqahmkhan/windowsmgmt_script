@@ -1,0 +1,20 @@
+>> is for appending in an existing file
+> is for creating or replacing if exists
+
+
+cmd > <filename with directory and extension>
+rsop (to check Group policy)
+subst t: c:\"new"
+netstat | findstr <either ESTABLISHED/PORT>
+compact /c /s *.doc
+sfc /scannow
+net stats workstation
+to get list of drives on a server: 
+wmic logicaldisk get description,name
+To find disk space on server
+fsutil volume diskfree <driveletter>
+net stats srv > C:\Users\czz06jh\Desktop\abcd.txt
+To check if existing port is listening or not (check/replace IP in cfg file and check/replace its corresponding port)
+echo "IP" >> C:\Users\ADMIBM02\Desktop\results.txt && netstat -an | findstr <port> >> C:\Users\ADMIBM02\Desktop\results.txt
+To get list of only running services
+sc queryex type= service | findstr "SERVICE_NAME"

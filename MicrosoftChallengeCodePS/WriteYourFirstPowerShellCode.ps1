@@ -1,4 +1,4 @@
-# instead of prompting the user, I used Get-Command -Noun *date* -Verb Get*, pipelined with Get-Member then used .Date to get just date
+# instead of prompting the user, I used Get-Command -Noun *date* -Verb Get*, pipelined with Get-Member to get member then used .Date to get just date
 $Date = (Get-Date).Date
 $Name = Read-Host -Prompt "Please provde your name"
 

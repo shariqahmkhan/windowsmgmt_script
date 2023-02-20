@@ -14,3 +14,9 @@ System volume information high space usage due to chunk store ( Dedup and Chunk 
 start-dedupjob -Volume <VolumeLetter> -Type GarbageCollection
 start-dedupjob -Volume <VolumeLetter> -Type DataScrubbing
 To monitor dedup (takes around few hours)  Get-DedupJob
+
+To get Powershell Version
+$PSVersionTable.PSVersion
+
+To get process with highest CPU
+Get-Process | Sort-Object -Descending -Property CPU

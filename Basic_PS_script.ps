@@ -18,5 +18,5 @@ To monitor dedup (takes around few hours)  Get-DedupJob
 To get Powershell Version
 $PSVersionTable.PSVersion
 
-To get process with highest CPU
-Get-Process | Sort-Object -Descending -Property CPU
+To get top 5 process with highest CPU
+get-process | sort-object -descending -Property CPU | Select-Object -First 5
